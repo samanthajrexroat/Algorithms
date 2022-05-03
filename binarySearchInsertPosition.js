@@ -6,7 +6,8 @@
  var searchInsert = function(nums, target) {
      // Adding a new function so we can insert our values recursively in our return
     function search(start, end) {
-        //If the starting position is larger than the ending (i.e. not in order), return the start.
+        //If the starting position is larger than the ending (i.e. not in order), return the start...
+        // this is where the index would be if the target is not included.
         if (start > end) return start;
         //Find the midpoint
         const mid = Math.floor((start + end) / 2);
