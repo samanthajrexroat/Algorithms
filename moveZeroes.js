@@ -4,9 +4,13 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
  var moveZeroes = function(nums) {
+    // moving from ending to beginning,
     for(let i = nums.length-1; i>=0 ; i--) {
+        // if the index equals zero,
         if (nums[i] === 0) {
+            // push a zero to the end of the array
             nums.push(0);
+            // and splice/delete that index
             nums.splice(i, 1);
         }
     }
