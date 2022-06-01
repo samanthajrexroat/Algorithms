@@ -6,7 +6,7 @@ function reverseString(str) {
       .join("");
   }
 
-  
+
 // O(1) runtime solution using while loop.
 /**
  * @param {character[]} s
@@ -21,4 +21,23 @@ function reverseString(str) {
         start++;
         end--;
     }
+};
+
+// Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+/**
+ * @param {string} s
+ * @return {string}
+ */
+ var reverseWords = function(s) {
+    let str = '';
+    let word = '';
+    for (let chr of s) {
+        if (chr === ' ') {
+            str += word + chr;
+            word = '';
+        } else {
+            word = chr + word;
+        }
+    }
+    return str + word;
 };
