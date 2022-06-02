@@ -29,13 +29,19 @@ function reverseString(str) {
  * @return {string}
  */
  var reverseWords = function(s) {
+     // new string 
     let str = '';
     let word = '';
+    // for each character in the string...
     for (let chr of s) {
+        // if it is a space,
         if (chr === ' ') {
+            // add it to the new string
             str += word + chr;
+            // and reset word.
             word = '';
         } else {
+            // otherwise, 
             word = chr + word;
         }
     }
